@@ -2,48 +2,58 @@
 <html lang="jp">
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
-    <title>弦の課題３
-    </title>
-    <!-- ⑤スタイルシートの設定をしよう --><link rel="stylesheet" href="./css/style.css">
-    <!-- h1.htmlからある行をコピペしてくればOK -->
+    <title>弦の課題４</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-<h1><b>観察の結果を振り返る（2班）</b></h1>
-    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
-    <div>
-        <br>
-        <h2><b>1．調査内容</b></h2>
-        <ul><li><b>観察場所</b>　今回は、MMCから桜木町駅、東口改札で観察を行いました。</li>
-            <li><b>観察テーマ</b>　今回の観察テーマは、<b>髪色・服装・年齢それぞれの関係性</b>についてです。</li>
-        </ul>
-        </div>
-        
-        <div>
-        <h2>2．調査結果
-        <br>
-        <h3>①髪色に関する調査結果</h3>
-        <img src="../de12/images/観察結果１.png"width="600">
-    </h2>
-    <br>
-    <br>
-    まず、男女別で髪を染めている割合について観察してみました。以上の結果から、男性に比べて<b>女性の割合が圧倒的に高い</b>ことが分かりました。
-     </div>
-     <div>
-    <img src="../de12/images/観察結果２.jpg"width="600"> <img src="../de12/images/観察結果３.jpg"width="600"></a>
-    <br>
-    <br>
-    これらの画像は、男女それぞれの傾向を示したものです。男性は時間帯的に会社員の方がほとんどでした。会社の髪型・髪色の制限があるのか、<b>スーツを来た人は皆黒髪</b>でした。
-    <br>
-    女性の傾向は、染めている人の年齢の<b>幅が広く、目的も様々</b>>なようです。
-    <br>
-    <br>
-    <h3>②髪色と服装の関係</h3>
-    <br>
-    <img src="../de12/images/観察結果４.jpg"width="600">
-    <br>
-    上の画像は、髪を染めている人・染めてない人それぞれの服の系統についてまとめたものです。
-    <br>女性の多くは、染めてる染めてないに関係なく、女性的な服装をしていることが分かりました。
-    男性はそもそも髪を染めている人が少なく、服装の系統としては、カジュアル・フォーマル・ナチュラルの三つの系統が多数を占めていました。
+
+<h1>第４回課題　～難しい漢字の読みを当てろ！（食べ物編）～</h1>
+<br>
+今回5班では、<b>漢字の読みを当ててもらうクイズ</b>を作ってみました！
+ただ、Pythonの仕組みやタグの使い方をしっかり理解できてい部分が多かったので、CHATGPTに力を借りてしまいました・・
+<br>
+<h4>＜使い方＞</h4>
+難易度が３段階に分かれており、難易度順に問題を漢字の読みを当てていくというものになります。
+ <br>
+ <br>
+ <div>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">difficulty_levels = {</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;1:{"反片":"はんぺん","蒲鉾":"かまぼこ"},</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;2: {"御手洗団子": "みたらしだんご", "玉蜀黍": "とうもろこし"},</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;3: {"鹿尾菜": "ひじき", "陸蓮根": "おくら"},</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">def quiz(difficulty):</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;words = difficulty_levels.get(difficulty, {})</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if not words:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("その難易度は存在しません。")</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;for word, reading in words.items():</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_input = input(f"{word} の読み方は？ ")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if user_input == reading:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解です！")</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"残念、正解は {reading} でした。")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">for difficulty in range(1, 4):</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(f"\n難易度 {difficulty}:")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;quiz(difficulty)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        </ol></code>
+</div>
+<div><h2>反省点</h2>
+・表示を「レベル１」等ではなく、「第一関門」等にアレンジしたらゲームっぽくなるかもしれないと思いました。また、レベルごとにクリアした時の返答を分けて作っても面白かったかもしれません。
+<br>
+・CHATGPTを参考にゲームを作る時は、どのようなゲームをどのように作りたいかを詳細に説明すべきだと考えました。自分が考えていたゲーム内容との差異が生まれてしまいました。
 </div>
 </body>
 </html>

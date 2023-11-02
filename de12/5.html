@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>弦の課題5</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<h1>【アプリ作成課題】</h1>
+<h2>～本の在庫確認を簡単に！～</h2>
+<br>
+今回は、<b>各本屋の在庫確認ページに飛ぶことができる</b>というアプリを作ってみました！
+<br>
+<br>
+以下がアプリのソースコードになります。
+<br>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import tkinter as tk</li>
+    <li style="background-color:#EEF;">import webbrowser</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">def open_url1():</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;url1 = 'https://store-tsutaya.tsite.jp/item/search_result.html?k=&amp;i=226'  </li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open_new(url1)</li>
+    <li style="background-color:#EFF;">def open_url2():</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;url2 = 'https://search.yurindo.bscentral.jp/search' </li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open_new(url2)</li>
+    <li style="background-color:#EEF;">def open_url3():</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;url3 = 'https://www.miraiyashoten.co.jp/search/'  </li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open_new(url3)</li>
+    <li style="background-color:#EFF;">def open_url4():</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;url4 = 'https://www.books-sanseido.jp/booksearch/BookSearchInit.action'  </li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open_new(url4)</li>
+    <li style="background-color:#EEF;">def open_url5():</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;url5 = 'https://www.search.kumabook.com/kumazawa/html/'  </li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open_new(url5)</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">app = tk.Tk()</li>
+    <li style="background-color:#EEF;">app.title("在庫確認アプリ")</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">button1 = tk.Button(app, text="蔦屋書店", command=open_url1)</li>
+    <li style="background-color:#EEF;">button1.pack(pady=20)</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">button2 = tk.Button(app, text="有隣堂", command=open_url2)</li>
+    <li style="background-color:#EFF;">button2.pack(pady=20)</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">button3 = tk.Button(app, text="未来屋書店", command=open_url3)</li>
+    <li style="background-color:#EEF;">button3.pack(pady=20)</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">button4 = tk.Button(app, text="三省堂書店", command=open_url4)</li>
+    <li style="background-color:#EFF;">button4.pack(pady=20)</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">button5 = tk.Button(app, text="くまざわ書店", command=open_url5)</li>
+    <li style="background-color:#EEF;">button5.pack(pady=20)</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">app.mainloop()</li>
+    <li style="background-color:#EFF;"></li>
+    </ol></code>
+<br>
+<br>
+<h2>【利用するメリット】</h2>
+<ul>
+<li>すぐに買いたい本がどこに売ってるかを確認できる</li>
+<li>本屋のホームページに飛んで、在庫確認ページに移動する手間を省ける</li>
+</ul>
+<h2>【利用手順】</h2>
+<ol>
+<li>アプリを起動</li>
+<li>確認したい書店のボタンを押す</li>
+<li>各書店の在庫確認ページに飛べます！</li>
+</ol>
+実際にアプリを使ってみました！
+<a href="https://youtube.com/shorts/z8K1jzgSXqw?si=qjY7409zb8DiEEJC">こちら</a>から、その様子を見ることができます！
+<br>
+<h2>【反省点】</h2>
+<ul>
+<li>在庫検索ページのレイアウトが書店によってバラバラなため、検索ページに飛んだ際に見にくい</li>
+<li>アプリ画面の色やレイアウトがつまらない</li>
+
+</ul>
+</body>
+</html>
